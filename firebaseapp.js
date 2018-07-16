@@ -55,22 +55,22 @@ $(document).ready(function () {
   // Capture Button Click
   $("#form-submit").on("click", function (event) {
     event.preventDefault();
-    var employeeName = "";
-    var employeeTitle = "";
-    var startDate = 0;
-    var monthlyRate = 0;
+    var trainName = "";
+    var destinationName = "";
+    var trainTime = 0;
+    var frequency = 0;
     // Grabbed values from text boxes
-    employeeName = $("#employee-name").val().trim();
-    title = $("#employee-title").val().trim();
-    startDate = $("#startdate-input").val().trim();
-    monthlyRate = $("#monthlyrate-input").val().trim();
+    trainName = $("#trainName").val().trim();
+    destinationName = $("#destinationName").val().trim();
+    trainTime = $("#trainTime").val().trim();
+    frequency = $("#frequency").val().trim();
 
     // Code for handling the push
     database.ref().push({
-      name: employeeName,
-      title: employeeTitle,
-      start: startDate,
-      rate: monthlyRate,
+      train: trainName,
+      destination: destinationName,
+      time: trainTime,
+      frequency: frequency,
       dateAdded: firebase.database.ServerValue.TIMESTAMP
     });
 
@@ -79,22 +79,31 @@ $(document).ready(function () {
   // Firebase watcher .on("child_added"
   database.ref().on("child_added", function (snapshot) {
     // storing the snapshot.val() in a variable for convenience
-    var employeeName = snapshot.val().name;
-    var employeeTitle = snapshot.val().title;
-    var startDate = snapshot.val().start;
-    var monthlyRate = snapshot.val().rate;
+    var trainName = snapshot.val().train;
+    var destinationName = snapshot.val().destination;
+    var trainTime = snapshot.val().time;
+    var frequency = snapshot.val().frequency;
 
     // Console.logging the last user's data
-    console.log(employeeName);
-    console.log(employeeTitle);
-    console.log(startDate);
-    console.log(monthlyRate);
+    console.log(trainName);
+    console.log(destinationName);
+    console.log(trainTime);
+    console.log(frequency);
+
+
+    // add items to the table
+    $("#trainTable").append(
+      " <tr><th class='trainItems' id='tableFrequency'> " + snapshot.val().frequency +
+      " </th><td class='trainItems' id='tableTrainName'> " + snapshot.val().train +
+      " </td><td class='trainItems' id='tableDestination'> " + snapshot.val().destination +
+      " </td><td class='trainItems' id='tableTime'> " + snapshot.val().time + " </td></tr>");
+
 
     // Change the HTML to reflect
-    $("#employee-name").text(employeeName);
-    $("employee-title").text(title);
-    $("#startdate-input").text(startDate);
-    $("#monthlyrate-input").text(monthlyRate);
+    $("#trainName").text(snapshot.val().trainName);
+    $("destinationName").text(snapshot.val().destinationName);
+    $("#trainTime").text(snapshot.val().trainTime);
+    $("#frequency").text(snaphshot.val().frequency);
 
     // Handle the errors
   }, function (errorObject) {

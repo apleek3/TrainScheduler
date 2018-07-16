@@ -19,7 +19,7 @@
 </head>
 
 <body>
-  <nav class="position-sticky navbar navbar-default">
+  <nav class="navbar navbar-default">
     <div class="container-fluid maxwidth">
       <div class="navbar-header myheader">
         <a class="navbar-brand myheader" href="#home">&ensp;Alexander Lee</a>
@@ -51,7 +51,10 @@
         <a href="../unit-4-game/index.html">Crystal Collector</a>
       </p>
       <p>
-        <a href="./index.html">GifTastic!</a>
+        <a href="../GifTastic/index.html">GifTastic!</a>
+      </p>
+      <p>
+        <a href="./index.html">Train Scheduler</a>
       </p>
 
 
@@ -64,8 +67,42 @@
         <br>
         <hr class="my-4">
         <br>
-        <br>
 
+        <div class="card" style="width: 90%">
+          <table class="table table-sm">
+            <thead>
+              <tr>
+                <th scope="col">Frequency</th>
+                <th scope="col">Train Name</th>
+                <th scope="col">Destination</th>
+                <th scope="col">Arrival Time</th>
+              </tr>
+            </thead>
+            <tbody id="trainTable">
+              <!--
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+              </tr>-->
+            </tbody>
+          </table>
+        </div>
+
+        <br>
+        <h3>Need to add a train to the schedule? Add it down here.</h3>
         <!-- Text with spanID that gets filled with content -->
         <div class="card" style="width: 90%">
           <form>
@@ -86,41 +123,10 @@
               <input type="number" class="form-control" id="frequency" placeholder="Frequency of Arrival?">
             </div>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button id="form-submit" type="submit" class="btn btn-primary">Submit</button>
           </form>
         </div>
-
-        <div class="card" style="width: 90%">
-          <table class="table table-sm">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <br>
       </div>
     </div>
   </div>

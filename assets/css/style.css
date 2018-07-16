@@ -280,7 +280,11 @@ textarea {
     padding: 10px;
     text-align:center;
     background-color: #eee; 
-    opacity: 0.9;
+    opacity: 0.8;
+}
+
+h3 {
+    text-align: center;
 }
 
 
