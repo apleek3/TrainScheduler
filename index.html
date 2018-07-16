@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <title>Employee Data Management</title>
+
+
+
+  <!-- Firebase App is always required and must be first 
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-app.js"></script>-->
+
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css" />
+
+  <!-- JQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Firebase JavaScript Link -->
+  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+
+
+
+
+
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid maxwidth">
+      <div class="navbar-header myheader">
+        <a class="navbar-brand myheader" href="#home">&ensp;Alexander Lee</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <!--
+                                <li class="active">
+                                    <a href="#home">Home</a>
+                                </li>-->
+        <li class="active">
+          <a class="paddown" href="index.html">About</a>
+        </li>
+        <li>
+          <a class="paddown" id="dividers" href="portfolio.html">Portfolio</a>
+        </li>
+        <li>
+          <a class="paddown" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="fluid-container content maxwidth">
+    <div class="jumbotron">
+      <h1 class="display-4">Employee Data Management</h1>
+      <h2 class="display-4">A Comprehensive Directory of Employee Billable Hours</h2>
+
+      <hr class="my-4">
+      <br>
+      <br>
+
+
+      <!-- Text with spanID that gets filled with content -->
+      <form class="needs-validation" novalidate>
+        <div class="form-row">
+          <div class="col-md-12 mb-3">
+            <label for="validationTooltip01">Employee Name </label>
+            <input type="text" class="form-control" id="employee-name" placeholder="(First, Last)" value="" required>
+
+          </div>
+          <div class="col-md-12 mb-3">
+            <label for="validationTooltip02">Employee Title</label>
+            <input type="text" class="form-control" id="employee-title" placeholder="Last name" value="Otto" required>
+
+          </div>
+          <div class="col-md-12 mb-3">
+            <label for="validationTooltip02">Start Date</label>
+            <input type="text" class="form-control" id="startdate-input" placeholder="Last name" value="Otto" required>
+
+          </div>
+          <div class="col-md-12 mb-3">
+            <label for="validationTooltip02">Monthly Rate</label>
+            <input type="text" class="form-control" id="monthlyrate-input" placeholder="Last name" value="Otto" required>
+
+          </div>
+
+        </div>
+
+        <button id="form-submit" class="btn btn-primary" type="submit">Submit form</button>
+      </form>
+
+      <table class="table table-sm">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+    </div>
+
+
+
+    <script type="text/javascript" src="firebaseapp.js"></script>
+
+
+    <!-- Latest compiled and minified JavaScript
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"></script> -->
+
+
+
+</body>
+
+</html>
